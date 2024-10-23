@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Main Container (Rectangle 1) */
+        body {
+            
+            background: black;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        
+        }
+
+        /* Login Container */
+        .login-container {
+            background: linear-gradient(to bottom left, #0c4a0f, rgb(49, 47, 47)); /* Green to grey gradient */
+            border-radius: 30px;
+            padding:30px;
+            width: 390px;
+            min-height: 500px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+            position: relative;
+        }
+
+        /* Logo at the Top-Left */
+        .login-container img.logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 50px;
+            height: auto;
+        }
+
+        /* Title: Login to your account */
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 24px;
+        }
+
+        /* Subtext: Description */
+        p {
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Role Selection Buttons */
+        .role-selection {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .role-selection button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .role-selection .admin {
+            background-color: #141e30;
+            color: #57ce12;
+            border: 1px solid #57ce12;
+        }
+
+        .role-selection .user {
+            background-color: #57ce12;
+            color: #f1f1f1;
+        }
+
+        .role-selection button:hover {
+            background-color: #2f4f4f;
+        }
+
+        /* Telegram Input */
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #ddd;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        select, input[type="text"], input[type="password"] {
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            background-color: #1c1c1c;
+            color: #ffffff;
+        }
+
+        select {
+            width: 30%;
+        }
+
+        input[type="text"] {
+            width: 70%;
+        }
+
+        input[type="password"] {
+            width: 96%;
+            margin-bottom: 20px;
+        }
+
+        /* Submit Button */
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            background-color: #57ce12;
+            color: #fcfcfc;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45b810;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 480px) {
+            .login-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 12px;
+            }
+
+            .login-container img.logo {
+                width: 40px;
+                top: 15px;
+                left: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Add the logo image -->
+        <img src="Frame.png"
+        
+         alt="Logo" class="logo">
+        
+        <h2>Login to your account</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        
+        <div class="role-selection">
+            <button class="admin">Admin</button>
+            <button class="user">User</button>
+        </div>
+        
+        <label for="country-code">Telegram-Number</label>
+        <div class="input-group">
+            <select id="country-code">
+                <option value="+92">+92</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+            </select>
+            <input id="telegram-number" placeholder="6458481**********" type="text"/>
+        </div>
+        
+        <label for="enter-code">Please Enter Code</label>
+        <input id="enter-code" placeholder="7572257*****" type="password"/>
+        
+        <input type="submit" value="Login"/>
+    </div>
+</body>
+</html>
